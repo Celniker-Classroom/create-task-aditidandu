@@ -12,22 +12,10 @@
 <body>
     <h1>To-do List</h1>
 
-    <h2 id="msg">Enter your name: </h2>
-    <input type="text" id="name">
-    <button id="nameEnter">Enter</button>
-
-    <h3 id="msg">Categories (Optional)</h3>
-    <input type="radio" name="Letter Count" id="2" value="2" checked><label for="a">2</label> 
-    <input type="radio" name="Letter Count" id="3" value="3"><label for="b">3</label> 
-    <input type="radio" name="Letter Count" id="4" value="4"><label for="c">4</label> 
-    <input type="radio" name="Letter Count" id="5" value="5"><label for="d">5</label> 
-    <input type="radio" name="Letter Count" id="6" value="6"><label for="e">6</label> 
-    <input type="radio" name="Letter Count" id="7" value="7"><label for="f">7</label> 
-    <input type="radio" name="Letter Count" id="8" value="8"><label for="g">8</label> 
-
-    <h3 id="msg">Enter Assignment</h3>
-    <input type="text" id="assignment">
-    <button id="assignmentEnter">Enter</button>
+    <h2 id="msg">Add a task: </h2>
+    <input type="task" placeholder="Enter a new task...">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
 
 
 </body>
