@@ -1,18 +1,22 @@
-<!-- This is a word guessing game with similar rules to hangman. Instead of the hangman, there will be a racoon going towards your lunch. Each incorrect guess will make the racoon one step closer to your lunch. If you get the letter right, the racoon will make a sad expression. Once you make 6-10 incorrect guesses, the racoon will eat your lunch and you loose. To play the game, the player first selects the letter count of the word they will guess. The game will generate the word they have to guess. The player will input a letter each time, and the game will either fill in the slot if the letter is in the word or move the racoon if the letter is not. The game will keep track of the time, the amount of guesses, and the accuracy of your total guesses.  -->
+<!-- A to-do list where you input your tasks and assignments, putting in the deadline date, and optionally ranking it by importance. You can give descriptions to the tasks. You can also add categories to organize the tasks better. There will also be a displayed calendar to give a more visual display of the tasks.-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Word Guessing Game</title>
+    <title>Custom To-do list</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Word Guessing Game!</h1>
+    <h1>To-do List</h1>
+
     <h2 id="msg">Enter your name: </h2>
     <input type="text" id="name">
-    <h3 id="msg">Select a Level</h3>
-    <h3>Letter Count</h3>
+    <button id="nameEnter">Enter</button>
+
+    <h3 id="msg">Categories (Optional)</h3>
     <input type="radio" name="Letter Count" id="2" value="2" checked><label for="a">2</label> 
     <input type="radio" name="Letter Count" id="3" value="3"><label for="b">3</label> 
     <input type="radio" name="Letter Count" id="4" value="4"><label for="c">4</label> 
@@ -20,14 +24,11 @@
     <input type="radio" name="Letter Count" id="6" value="6"><label for="e">6</label> 
     <input type="radio" name="Letter Count" id="7" value="7"><label for="f">7</label> 
     <input type="radio" name="Letter Count" id="8" value="8"><label for="g">8</label> 
-    <button id="playBtn">Play</button>
-    <input type="text" id="guess">
-    <button id="guessBtn" disabled>Guess</button>
-    <button id="giveUpBtn" disabled>Give Up</button>
-    <h3>Stats</h3>
-    <p id="guesses">Guesses Made: </p>
-    <p id="accuracy">Accuracy: </p>
-    <p id="fastest">Fastest Game: </p>
-    <p id="avgTime">Average Time: </p>
+
+    <h3 id="msg">Enter Assignment</h3>
+    <input type="text" id="assignment">
+    <button id="assignmentEnter">Enter</button>
+
+
 </body>
 </html>
