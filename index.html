@@ -13,7 +13,13 @@
     <h1>To-do List</h1>
 
     <h2 id="msg">Add a task: </h2>
-    <input type="task" placeholder="Enter a new task...">
+    <input id="task" type="text" placeholder="Enter a new task">
+    <input id="deadline" type="date">
+    <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>        
+    </select>
     <button onclick="addTask()">Add</button>
     <ul id="taskList"></ul>
 

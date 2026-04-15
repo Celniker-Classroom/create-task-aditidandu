@@ -1,1 +1,17 @@
-/* Add Global styles here */
+.high {
+    background-color:rgb(219, 98, 122);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.medium {
+    background-color:rgb(240, 223, 127);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.low {
+    background-color: rgb(136, 240, 177);
+    padding: 5px;
+    border-radius: 5px;
+}
