@@ -1,5 +1,7 @@
-let questions = [
+let currentQuestion = 0;
+let playerScore = 0;
 
+let questions = [
     "What is the most commonly spoken language?",
     "What is the largest national park in the US by area?",
     "Which country's national animal is a unicorn?",
@@ -29,4 +31,26 @@ let answers = [
 
 ];
 
-let rightAnswers = [3, 1, 1, 0, 2, 3, 1, 2, 1, 0];
+let correctAnswers = [3, 1, 1, 0, 2, 3, 1, 2, 1, 0];
+
+
+function displayQuestion(){
+    document.getElementById("question").innerText = questions[currentQuestion];
+
+    for(let i = 0; i < 4; i++){
+        document.getElementById("btn" + i).innerText = answers[currentQuestion][i];
+    }
+    
+    document.getElementById("result").innerText = "";
+}
+
+displayQuestion();
+
+function checkAnswer(selected) {
+    if(selected === correctAnswers[currentQuestion]) {
+        document.getElementById("result").innerText = "Correct!";
+        score++;
+    } else {
+        document.getElementById("result").innerText = "Incorrect. The correct answer is " + correctAnswers[currentQuestion];
+    }
+}
