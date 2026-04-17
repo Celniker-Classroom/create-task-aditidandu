@@ -44,8 +44,6 @@ function displayQuestion(){
     document.getElementById("playerScore").innerText = "";
 }
 
-displayQuestion();
-
 function checkAnswer(selected) {
     if(selected === correctAnswers[currentQuestion]) {
         document.getElementById("playerScore").innerText = "Correct!";
@@ -60,8 +58,9 @@ function nextQuestion() {
     if(currentQuestion < questions.length) {
         displayQuestion();
     } else {
-        document.getElementById("question").innerText = "You finished the quiz!Your score is " + playerScore + "/" + questions.length + "!";
-        
+        document.getElementById("question").innerText = "You finished the quiz!";
+        document.getElementById("playerScore").innerText = "Your score is " + playerScore + "/" + questions.length + "!";
     }
-    displayQuestion();
 }
+
+displayQuestion();
