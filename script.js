@@ -31,7 +31,7 @@ let answers = [
 
 ];
 
-let correctAnswers = [3, 1, 1, 0, 2, 3, 1, 2, 1, 0];
+let correctAnswers = [3, 1, 1, 0, 2, 3, 3, 1, 2, 1, 0];
 
 
 function displayQuestion(){
@@ -41,16 +41,17 @@ function displayQuestion(){
         document.getElementById("btn" + i).innerText = answers[currentQuestion][i];
     }
     
-    document.getElementById("result").innerText = "";
+    document.getElementById("playerScore").innerText = "";
 }
 
 displayQuestion();
 
 function checkAnswer(selected) {
     if(selected === correctAnswers[currentQuestion]) {
-        document.getElementById("result").innerText = "Correct!";
-        score++;
+        document.getElementById("playerScore").innerText = "Correct!";
+        playerScore++;
     } else {
-        document.getElementById("result").innerText = "Incorrect. The correct answer is " + correctAnswers[currentQuestion];
+        document.getElementById("playerScore").innerText = "Incorrect. The correct answer is " + answers[currentQuestion][correctAnswers[currentQuestion]] + ".";
     }
 }
+
