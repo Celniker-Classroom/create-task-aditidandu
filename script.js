@@ -37,10 +37,11 @@ let correctAnswers = [3, 1, 1, 0, 2, 3, 3, 1, 2, 1, 0];
 function displayQuestion(){
     document.getElementById("question").innerText = questions[currentQuestion];
 
+
     for(let i = 0; i < 4; i++){
         document.getElementById("btn" + i).innerText = answers[currentQuestion][i];
     }
-    
+
     document.getElementById("playerScore").innerText = "";
 }
 
@@ -58,9 +59,14 @@ function nextQuestion() {
     if(currentQuestion < questions.length) {
         displayQuestion();
     } else {
+        for(let i = 0; i < 4; i++){
+        document.getElementById("btn"+ i).hidden = true;
+        }
+        document.getElementById("nxtBtn").hidden = true;
         document.getElementById("question").innerText = "You finished the quiz!";
         document.getElementById("playerScore").innerText = "Your score is " + playerScore + "/" + questions.length + "!";
     }
+    
 }
 
-displayQuestion();
+displayQuestion(); 
