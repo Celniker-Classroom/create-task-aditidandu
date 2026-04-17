@@ -55,3 +55,13 @@ function checkAnswer(selected) {
     }
 }
 
+function nextQuestion() {
+    currentQuestion++;
+    if(currentQuestion < questions.length) {
+        displayQuestion();
+    } else {
+        document.getElementById("question").innerText = "You finished the quiz!Your score is " + playerScore + "/" + questions.length + "!";
+        
+    }
+    displayQuestion();
+}
