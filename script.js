@@ -25,7 +25,7 @@ let answers = [
     ["Tokyo", "Dhaka", "Shanghai", "Jakarta"],
     ["Bolivia", "South Africa", "Italy", "Australia"],
     ["Mayans", "Zapotecs", "Incas", "Aztecs"],
-    ["Abraham Lincoln", "James Madison", "Theordore Roosevelt", "Thomas Jefferson"],
+    ["Abraham Lincoln", "James Madison", "Theodore Roosevelt", "Thomas Jefferson"],
     ["Neuschwanstein Castle", "Windsor Castle", "Château de Chambord", "Prague Castle"],
 ];
 
@@ -44,6 +44,7 @@ function displayQuestion(){
         let btn = document.getElementById("btn" + i);
         btn.textContent = answers[currentQuestion][i];
         btn.hidden = false;
+        btn.disabled = false;
     }
 
     document.getElementById("playerScore").textContent = "";
@@ -62,6 +63,9 @@ function checkAnswer(selected) {
     } else {
         document.getElementById("playerScore").textContent = "Incorrect. The correct answer is " + answers[currentQuestion][correctAnswers[currentQuestion]] + ".";
     }
+    for (let  i = 0; i < 4; i++) {
+    document.getElementById("btn" + i).disabled = true;
+    };
 }
 
 document.getElementById("nxtBtn").addEventListener("click", function() {
