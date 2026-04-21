@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color:rgb(213, 213, 245);
+    color: #514560;
+    padding: 20px;
+}
+
+button:hover{
+     transform: scale(1.05); 
+    }
