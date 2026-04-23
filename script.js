@@ -91,15 +91,15 @@ document.getElementById("nxtBtn").addEventListener("click", function() {
     if(currentQuestion < questions.length) {
         displayQuestion();
     } else {
-        for(let i = 0; i < 4; i++){
+        for (let i = 0; i < 4; i++){
             document.getElementById("btn"+ i).hidden = true;
-        }
+        };
 
         document.getElementById("nxtBtn").hidden = true;
         document.getElementById("question").textContent = "You finished the quiz!";
         document.getElementById("playerScore").textContent = "Your score is " + playerScore + "/" + questions.length + "!";
-    }
-    
+
+}
 });
     
 
