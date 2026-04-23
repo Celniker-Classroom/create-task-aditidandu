@@ -1,28 +1,31 @@
 body {
     font-family:'Times New Roman', Times, serif;
     text-align: center;
-    background-color:rgb(141, 170, 209);
-    color: white;
-    padding: 20px;
+    color: rgb(5, 73, 41);
+    width: 800px;
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
         
 }
 
 h1 {
-    background-color: rgb(41, 163, 92);
+    background-color: rgb(158, 238, 191);
     width: 600px;
     margin: 0 auto;
     padding: 30px;
-    border: 7px double white;
+    border: 7px double rgb(70, 150, 103);
     text-align: center;
     font-size: 3em;
 } 
 
 h2{
-    background-color: rgb(41, 163, 92);
-    width: 800px;
+    background-color: rgb(158, 238, 191);
+    width: 700px;
     margin: 20px auto;
     padding: 15px;
-    border: 2px solid white;
+    border: 2px solid rgb(70, 150, 103);
     text-align: center;
     font-size: 1.5em;
 }
@@ -32,19 +35,44 @@ button:hover{
 }
 
 button {
-    background-color: rgb(41, 163, 92);
-    color: white;
-    border: 2px solid white;
+    background-color: rgb(158, 238, 191);
+    color: rgb(5, 73, 41);
+    border: 2px solid rgb(70, 150, 103);
     font-size: 1em;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;   
 }
 
 button:disabled {
-    background-color: rgb(38, 124, 74);
-    color: white;
-    border: 2px solid white;
+    background-color: rgb(158, 238, 191);
+    color: rgb(5, 73, 41);
+    border: 2px solid rgb(70, 150, 103);
     font-size: 1em;
     cursor: not-allowed;
     opacity: 0.6;
+}
+
+.dark-mode {
+    background-color:rgb(23, 19, 53);
+    color: white;
+}
+
+.dark-mode button {
+    background-color: #36254e;
+    color: white;
+    border: 1px solid #4f3476;
+    margin-top: 20px;
+
+}
+
+.dark-mode h1 {
+    background-color:#36254e;
+    border: 7px double rgb(139, 120, 150);
+
+}
+.dark-mode h2 {
+    background-color:#36254e;
+    border: 2px solid rgb(139, 120, 150);
+
+
 }

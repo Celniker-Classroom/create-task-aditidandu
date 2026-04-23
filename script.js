@@ -31,6 +31,16 @@ let answers = [
 
 let correctAnswers = [3, 1, 1, 0, 2, 3, 3, 1, 2, 1, 0];
 
+document.getElementById("darkBtn").addEventListener("click", function(){
+    document.body.classList.toggle("dark-mode");
+    let btn = document.getElementById("darkBtn");
+    if (document.body.classList.contains("dark-mode")){
+        btn.textContent = "Light Mode";
+    } else{
+        btn.textContent = "Dark Mode";
+    }
+});
+
 document.getElementById("question").hidden = true;
 document.getElementById("btn0").hidden = true;
 document.getElementById("btn1").hidden = true;
@@ -98,6 +108,7 @@ document.getElementById("nxtBtn").addEventListener("click", function() {
         document.getElementById("nxtBtn").hidden = true;
         document.getElementById("question").textContent = "You finished the quiz!";
         document.getElementById("playerScore").textContent = "Your score is " + playerScore + "/" + questions.length + "!";
+
 
 }
 });
