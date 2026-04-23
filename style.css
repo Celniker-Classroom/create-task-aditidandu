@@ -41,6 +41,8 @@ button {
     font-size: 1em;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;   
+    margin-top: 20px;
+
 }
 
 button:disabled {
